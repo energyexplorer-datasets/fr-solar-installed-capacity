@@ -19,3 +19,9 @@ Source: [Registre national des installations de production et de stockage d'éle
 ## Methodology
 
 Methodology: see src/README.md
+
+## License
+
+Data: Licence Ouverte
+
+Code: MIT
