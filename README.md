@@ -1,0 +1,1 @@
+# fr-solar-installed-capacity
