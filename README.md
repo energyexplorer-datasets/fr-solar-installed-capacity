@@ -8,7 +8,9 @@ This repository uses GIT-LFS to store large files. You may need to install it. S
 
 **Density of photovoltaic production capacity**
 
-Unit: kWc / m2
+![preview](density-preview.png)
+
+Unit: maximum installed production capacity, in kW / m2
 
 Projection: Lambert-93
 
