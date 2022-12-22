@@ -1,5 +1,7 @@
 # energyexplorer-datasets/fr-solar-installed-capacity
 
+This repository uses GIT-LFS to store large files. You may need to install it. See https://git-lfs.com/
+
 ## Content
 
 - density.tif : Density of photovoltaic production capacity, in kWc / m2 (Lambert-93)
