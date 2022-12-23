@@ -36,7 +36,7 @@ cd fr-solar-installed-capacity
 You can have the new or updated files automatically downloaded when you do a `git pull`. For that, add a hook to your git repository:
 ```
 cd fr-solar-installed-capacity # if not already here
-echo -e '#!/bin/sh\nexec ./download.sh' >> .git/hooks/post-merge
+echo -e '#!/bin/sh\nexec ../common/download.sh' >> .git/hooks/post-merge
 chmod +x .git/hooks/post-merge
 ```
 
