@@ -1,4 +1,4 @@
-# energyexplorer-datasets/fr-solar-installed-capacity
+# fr-solar-installed-capacity
 
 ## Content
 
@@ -16,19 +16,29 @@ Projection: Lambert-93
 
 Source: [Registre national des installations de production et de stockage d'électricité (31/10/2022)](https://odre.opendatasoft.com/explore/dataset/registre-national-installation-production-stockage-electricite-agrege/information) / ODRÉ
 
-## How to pull the large files?
-
-The large files are stored outside this repository.
-
-They are replaced by a ".DOWNLOAD_ME" file, containing the URL where you can download this file.
-
-Once you have pulled the repository, you can retrieve all files by running the `./download.sh`.
-
-To make this process automated after each pull, go to the root of your repository and run the following command: `H=.git/hooks/post-merge; echo -e '#!/bin/sh\nexec ./download.sh' > $H; chmod +x $H`
-
 ## Methodology
 
 Methodology: see src/README.md
+
+## .DOWNLOAD_ME files
+
+The large files are stored outside this repository. They are replaced by a ".DOWNLOAD_ME" file containing their URL.
+
+To easily retrieve all files at once, you can use the `./download.sh` utility from the [energyexplorer-datasets/common](https://github.com/energyexplorer-datasets/common) repository.
+
+```
+git clone https://github.com/energyexplorer-datasets/common.git
+git clone https://github.com/energyexplorer-datasets/fr-solar-installed-capacity.git
+cd fr-solar-installed-capacity
+../common/download.sh
+```
+
+You can have the new or updated files automatically downloaded when you do a `git pull`. For that, add a hook to your git repository:
+```
+cd fr-solar-installed-capacity # if not already here
+echo -e '#!/bin/sh\nexec ./download.sh' >> .git/hooks/post-merge
+chmod +x .git/hooks/post-merge
+```
 
 ## License
 
