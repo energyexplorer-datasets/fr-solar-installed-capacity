@@ -11,6 +11,8 @@ capacity = {
     'unlocated': {}
 }
 
+sumOfPower = 0
+
 def add(type, site, power):
     if not site in capacity[type]:
         capacity[type][site] = float(power)
@@ -43,6 +45,8 @@ with open('registre-national-installation-production-stockage-electricite-agrege
                 print(facility)
                 continue
 
+        sumOfPower += float(power)
+
         if irisSite:
             add('iris', irisSite, power)
         elif inseeSite:
@@ -65,3 +69,5 @@ with open('registre-national-installation-production-stockage-electricite-agrege
     for type in capacity:
         for site, power in capacity[type].items():
             writer.writerow([type, site, power])
+
+    print(f"total installed capacity: {sumOfPower/1e6} GW")
